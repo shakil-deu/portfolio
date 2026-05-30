@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>SHAKIL Portfolio</title>
+
+  <style>
+    
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      cursor:none;
+    }
+
+    body{
+      width:100%;
+      height:100vh;
+      overflow:hidden;
+      background:#f3c613;
+      font-family:Arial, Helvetica, sans-serif;
+      position:relative;
+    }
+
+    /* =========================
+       CUSTOM PNG CURSOR
+    ========================== */
+
+    .cursor{
+      position:fixed;
+      width:70px;
+      height:70px;
+      pointer-events:none;
+      z-index:99999;
+
+      transform:translate(-50%,-50%);
+    }
+
+    .cursor img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    /* =========================
+       LOGO
+    ========================== */
+
+    .logo{
+          position:absolute;
+
+          top:10px;
+          left:20px;
+
+          z-index:100;
+        }
+
+        .logo img{
+          width:120px;
+          height:60px;
+          object-fit:contain;
+        }
+
+    /* =========================
+       SCROLLING TEXT
+    ========================== */
+
+    .marquee{
+      position:absolute;
+      width:100%;
+      overflow:hidden;
+      white-space:nowrap;
+
+      z-index:1;
+    }
+
+    .top{
+      top:50px;
+    }
+
+    .bottom{
+      bottom:50px;
+    }
+
+   .track{
+  display:flex;
+  width:max-content;
+}
+
+/* TOP = LEFT SIDE */
+
+.top .track{
+  animation:scrollLeft 20s linear infinite;
+}
+
+/* BOTTOM = RIGHT SIDE */
+
+.bottom .track{
+  animation:scrollRight 20s linear infinite;
+}
+
+    .track h1{
+      font-size:120px;
+      font-weight:50;
+      color:black;
+      text-shadow:5px 5px 0px rgb(243, 243, 243);
+      padding-right:80px;
+
+      opacity:.8;
+    }
+
+ @keyframes scrollLeft{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+
+}
+
+@keyframes scrollRight{
+
+  0%{
+    transform:translateX(-50%);
+  }
+
+  100%{
+    transform:translateX(0);
+  }
+
+}
+
+    /* =========================
+       MAIN SECTION
+    ========================== */
+
+    .container{
+      width:100%;
+      height:100vh;
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+
+      position:relative;
+      z-index:10;
+    }
+
+    /* =========================
+       SA TEXT
+    ========================== */
+
+    .SA{
+      position:absolute;
+
+      left:120px;
+
+      font-size:260px;
+      font-weight:900;
+      color:black;
+      
+      z-index:2;
+    }
+
+    /* =========================
+       FLOATING IMAGE
+    ========================== */
+
+    .photo-box{
+
+      width:420px;
+      height:620px;
+
+      border:6px solid black;
+
+      overflow:hidden;
+
+      background:white;
+
+      position:relative;
+
+      z-index:10;
+
+      animation:float 3s ease-in-out infinite;
+
+      box-shadow:15px 15px 15px 15px rgb(244, 206, 19);
+    }
+
+    .photo-box img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    @keyframes float{
+
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-20px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+
+    }
+
+    /* =========================
+       BUTTONS
+    ========================== */
+
+    .socials{
+
+      position:fixed;
+
+      right:300px;
+
+      display:flex;
+      flex-direction:column;
+
+      gap:20px;
+
+      z-index:20;
+    }
+
+    .socials a{
+
+      text-decoration:none;
+
+      background:white;
+      color:black;
+
+      border:4px solid black;
+
+      padding:12px 35px;
+
+      font-size:15px;
+      font-weight:bold;
+
+      transition:.3s;
+
+      box-shadow:3px 3px 3px black;
+    }
+
+    .socials a:hover{
+
+      transform:translateY(-5px);
+
+      background:black;
+      color:#f3c613;
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media(max-width:1000px){
+
+      body{
+        overflow:auto;
+      }
+
+      .container{
+
+        flex-direction:column;
+
+        padding-top:120px;
+
+        gap:40px;
+      }
+
+      .SA{
+
+        position:relative;
+
+        left:0;
+
+        font-size:140px;
+      }
+
+      .photo-box{
+
+        width:300px;
+        height:420px;
+      }
+
+      .socials{
+
+        position:relative;
+
+        right:0;
+      }
+
+      .track h1{
+        
+        font: size 70px;;
+        
+       
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- =========================
+       PNG CURSOR
+  ========================== -->
+
+  <div class="cursor">
+
+    <img src="cursor.png" alt="">
+
+  </div>
+
+  <!-- =========================
+       LOGO
+  ========================== -->
+
+
+
+  <!-- =========================
+       TOP SCROLL TEXT
+  ========================== -->
+
+  <div class="marquee top">
+
+    <div class="track">
+      
+
+      <h1>SHAKIL • SHAKIL • SHAKIL • SHAKIL • SHAKIL •
+      </h1>
+
+      <h1>SHAKIL • SHAKIL • SHAKIL • SHAKIL • SHAKIL •</h1>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <div class="container">
+
+    <!-- SA -->
+
+    <div class="SA">
+      SA
+    </div>
+
+    <!-- IMAGE -->
+
+    <div class="photo-box">
+
+     <img src="https://i.ibb.co.com/XfJY1Mp9/05a121d3-32cf-442c-b1da-70352e882b1e.png" alt="05a121d3 32cf 442c b1da 70352e882b1e" border="0">
+    </div>
+
+    <!-- BUTTONS -->
+
+    <div class="socials">
+
+      <a href="hhttps://www.youtube.com/@ShakilAhmed-t2x7x" target="_blank">
+        YOUTUBE
+      </a>
+
+      <a href="https://instagram.com" target="_blank">
+        INSTAGRAM
+      </a>
+
+      <a href="https://www.facebook.com/DevShakil/" target="_blank">
+        FACEBOOK
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       BOTTOM SCROLL TEXT
+  ========================== -->
+
+  <div class="marquee bottom">
+
+    <div class="track">
+
+      <h1>SHAKIL • SHAKIL • SHAKIL • SHAKIL • SHAKIL •</h1>
+
+      <h1>SHAKIL • SHAKIL • SHAKIL • SHAKIL • SHAKIL •</h1>
+
+    </div>
+
+  </div>
+
+  <div class="logo">
+   <img src="https://i.ibb.co.com/1tBQZsmj/logo.png" alt="logo" border="0">
+</div>
+
+  <!-- =========================
+       CURSOR JS
+  ========================== -->
+
+  <script>
+
+    const cursor = document.querySelector(".cursor");
+
+    document.addEventListener("mousemove",(e)=>{
+
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+
+    });
+
+  </script>
+
+</body>
+
+</html>
